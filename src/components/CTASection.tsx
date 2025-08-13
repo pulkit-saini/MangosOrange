@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Zap, Phone, Mail } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
@@ -38,15 +39,15 @@ const CTASection = () => {
               <p className="text-muted-foreground mb-6">
                 Need skilled developers, DevOps engineers, or tech leaders? We'll find the perfect fit for your team.
               </p>
+              <Link to="/staffing">
               <Button 
                 size="lg" 
                 variant="premium"
                 className="w-full group"
-                onClick={() => window.location.href = '/staffing'}
               >
                 View Staffing
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              </Button></Link>
             </div>
 
             <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-secondary/30 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-xl card-hover"
@@ -57,15 +58,16 @@ const CTASection = () => {
               <p className="text-muted-foreground mb-6">
                 Transform your technology with cloud solutions, security, and digital transformation expertise.
               </p>
+              <Link to="/it-services">
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground group"
-                onClick={() => window.location.href = '/it-services'}
+                onClick={() => window.location.href = ''}
               >
                 Read More
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              </Button></Link>
             </div>
           </div>
 

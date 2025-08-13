@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,15 +16,15 @@ const Footer = () => {
               We know tech, we care about people.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/company/mangosorange/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              <Link to="https://www.linkedin.com/company/mangosorange/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              </Link>
+              <Link to="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+              </Link>
+              <Link to="#" className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300">
                 <Facebook className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -31,12 +32,12 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/web-development" className="text-background/80 hover:text-primary transition-colors">Web Development</a></li>
-              <li><a href="/app-development" className="text-background/80 hover:text-primary transition-colors">App Development</a></li>
-              <li><a href="/open-source" className="text-background/80 hover:text-primary transition-colors">Open Source</a></li>
-              <li><a href="/custom-software" className="text-background/80 hover:text-primary transition-colors">Custom Software</a></li>
-              <li><a href="/ecommerce" className="text-background/80 hover:text-primary transition-colors">E-commerce</a></li>
-              <li><a href="/cloud-strategy" className="text-background/80 hover:text-primary transition-colors">Cloud Infrastructure</a></li>
+              <li><Link to="/web-development" className="text-background/80 hover:text-primary transition-colors">Web Development</Link></li>
+              <li><Link to="/app-development" className="text-background/80 hover:text-primary transition-colors">App Development</Link></li>
+              <li><Link to="/open-source" className="text-background/80 hover:text-primary transition-colors">Open Source</Link></li>
+              <li><Link to="/custom-software" className="text-background/80 hover:text-primary transition-colors">Custom Software</Link></li>
+              <li><Link to="/ecommerce" className="text-background/80 hover:text-primary transition-colors">E-commerce</Link></li>
+              <li><Link to="/cloud-strategy" className="text-background/80 hover:text-primary transition-colors">Cloud Infrastructure</Link></li>
             </ul>
           </div>
 
@@ -44,11 +45,11 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/about" className="text-background/80 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="/contact" className="text-background/80 hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="/terms-and-conditions" className="text-background/80 hover:text-primary transition-colors">Terms & Conditions</a></li>
-              <li><a href="/careers" className="text-background/80 hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="/blog" className="text-background/80 hover:text-primary transition-colors">Blog</a></li>
+              <li><Link to="/about" className="text-background/80 hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-background/80 hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link to="/terms-and-conditions" className="text-background/80 hover:text-primary transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/careers" className="text-background/80 hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-background/80 hover:text-primary transition-colors">Blog</Link></li>
             </ul>
           </div>
 
@@ -58,15 +59,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@mangosorange.com" className="text-background/80 hover:text-primary transition-colors">
+                <Link to="mailto:info@mangosorange.com" className="text-background/80 hover:text-primary transition-colors">
                   info@mangosorange.com
-                </a>
+                </Link>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+911204164821" className="text-background/80 hover:text-primary transition-colors">
+                <Link to="tel:+911204164821" className="text-background/80 hover:text-primary transition-colors">
                   +91 120 416 4821
-                </a>
+                </Link>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -85,7 +86,7 @@ const Footer = () => {
               © 2025 MangosOrange. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm">
-              <a href="/terms-and-conditions" className="text-background/60 hover:text-primary transition-colors">Terms & Conditions</a>
+              <Link to="/terms-and-conditions" className="text-background/60 hover:text-primary transition-colors">Terms & Conditions</Link>
             </div>
           </div>
         </div>
