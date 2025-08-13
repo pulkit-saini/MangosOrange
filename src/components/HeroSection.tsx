@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Users } from 'lucide-react';
 import heroImage from '@/assets/professional-team-hero.jpg';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation();
@@ -42,14 +43,16 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+              <Link to="/contact">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-full group transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                onClick={() => window.location.href = '/contact'}
+                
               >
                 Hire Top Talent
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              </Button></Link>
+              <Link to="/contact">
               <Button 
                 size="lg" 
                 variant="outline" 
@@ -58,7 +61,7 @@ const HeroSection = () => {
               >
                 <Users className="mr-3 w-5 h-5 transition-all duration-300" />
                 Read More
-              </Button>
+              </Button></Link>
             </div>
 
             {/* Stats - Moved to bottom */}
