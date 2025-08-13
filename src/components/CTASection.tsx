@@ -63,7 +63,6 @@ const CTASection = () => {
                 size="lg" 
                 variant="outline" 
                 className="w-full border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground group"
-                onClick={() => window.location.href = ''}
               >
                 Read More
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
