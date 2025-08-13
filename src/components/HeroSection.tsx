@@ -57,7 +57,6 @@ const HeroSection = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold rounded-full group transform transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-black/20"
-                onClick={() => window.location.href = '/about'}
               >
                 <Users className="mr-3 w-5 h-5 transition-all duration-300" />
                 Read More
