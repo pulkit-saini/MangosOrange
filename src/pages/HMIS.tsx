@@ -27,6 +27,7 @@ import {
   Zap
 } from 'lucide-react';
 import hmisHeroImage from '@/assets/hmis-hero.jpg';
+import { Link } from 'react-router-dom';
 
 const HMIS = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
@@ -161,15 +162,15 @@ const HMIS = () => {
               Our HMIS platform streamlines patient care, billing, inventory, and records in one centralized dashboard.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
               <Button 
                 variant="premium" 
                 size="lg"
                 className="group"
-                onClick={() => window.location.href = '/contact'}
               >
                 Book a Demo
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>
@@ -377,15 +378,15 @@ const HMIS = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link to="/contact">
               <Button 
                 variant="outline"
                 size="lg"
                 className="group border-2 border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:border-primary-foreground"
-                onClick={() => window.location.href = '/contact'}
               >
                 Schedule a Free Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>
