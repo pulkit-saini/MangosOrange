@@ -52,7 +52,7 @@ const HeroSection = () => {
                 Hire Top Talent
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </Button></Link>
-              <Link to="/contact">
+              <Link to="/about">
               <Button 
                 size="lg" 
                 variant="outline" 

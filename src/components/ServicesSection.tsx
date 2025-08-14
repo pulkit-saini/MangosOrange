@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const services = [
   {
@@ -119,14 +119,15 @@ const ServicesSection = () => {
                       </li>
                     ))}
                   </ul>
+                  <Link to={serviceRoutes[index]}>
                   <Button 
                     variant="ghost" 
                     className="w-full justify-between group/btn hover:bg-primary/10 hover:text-primary transform transition-all duration-300 hover:scale-105"
-                    onClick={() => navigate(serviceRoutes[index])}
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform duration-300" />
                   </Button>
+                  </Link>
                 </CardContent>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </Card>
@@ -135,15 +136,16 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-12">
+          <Link to="it-services">
           <Button 
             size="lg" 
             variant="premium"
             className="group"
-            onClick={() => navigate('/it-services')}
           >
             View All Services
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
+          </Link>
         </div>
       </div>
     </section>
