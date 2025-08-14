@@ -358,12 +358,6 @@ const OpenSource = () => {
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="pt-4">
-                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                    <Github className="w-4 h-4 mr-2" />
-                    View Project
-                  </Button>
-                </CardContent>
               </Card>
             ))}
           </div>
