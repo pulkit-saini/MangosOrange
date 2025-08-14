@@ -19,7 +19,7 @@ import {
   Award,
   Shield
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import heroImage from '@/assets/it-services-hero.jpg';
 import webDevImage from '@/assets/web-development-service.jpg';
 import appDevImage from '@/assets/app-development-service.jpg';
@@ -27,7 +27,6 @@ import cloudImage from '@/assets/cloud-infrastructure-service.jpg';
 import openSourceImage from '@/assets/open-source-service.jpg';
 import ecommerceImage from '@/assets/ecommerce-service.jpg';
 import customSoftwareImage from '@/assets/custom-software-development.jpg';
-
 const services = [
   {
     icon: Code2,
@@ -104,6 +103,8 @@ const stats = [
   { icon: Zap, value: "10,000+", label: "Beneficiaries" }
 ];
 
+const routes = ['/web-development', '/app-development', '/cloud-strategy', '/open-source', '/custom-software', '/ecommerce'];
+
 const ITServices = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
   const { ref: servicesRef, isVisible: servicesVisible } = useScrollAnimation();
@@ -147,10 +148,11 @@ const ITServices = () => {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="premium" className="group" onClick={() => navigate('/contact')}>
+                <Link to="/contact">
+                <Button size="lg" variant="premium" className="group" >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
+                </Button></Link>
               </div>
             </div>
             <div className="relative group">
@@ -248,17 +250,14 @@ const ITServices = () => {
                         </li>
                       ))}
                     </ul>
+                    <Link to={routes[index]}>
                     <Button 
                       variant="ghost" 
                       className="w-full justify-between group/btn hover:bg-primary/10 hover:text-primary"
-                      onClick={() => {
-                        const routes = ['/web-development', '/app-development', '/cloud-strategy', '/open-source', '/custom-software', '/ecommerce'];
-                        window.location.href = routes[index];
-                      }}
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                    </Button>
+                    </Button></Link>
                   </CardContent>
                   
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -281,10 +280,11 @@ const ITServices = () => {
               and drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="premium" className="group" onClick={() => { window.location.href = '/contact' }}>
+              <Link to="/contact">
+              <Button size="lg" variant="premium" className="group">
                 Contact Now
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>
