@@ -45,7 +45,7 @@ const Header = () => {
         <nav className="flex items-center justify-between h-16 lg:h-20 max-w-7xl mx-auto">
           <Link to="/" className="flex items-center group">
             <div className="p-1 rounded-xl">
-              <img src="assets/c6935172-f978-4b7f-a28c-db62025bfe9b.png" alt="MangosOrange Logo" className="h-10 w-auto" />
+              <img src="@assets/c6935172-f978-4b7f-a28c-db62025bfe9b.png" alt="MangosOrange Logo" className="h-10 w-auto" />
             </div>
           </Link>
 
