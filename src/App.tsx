@@ -30,6 +30,12 @@ import PayrollOutsourcing from "./pages/staffing/PayrollOutsourcing";
 import ManagementConsulting from "./pages/staffing/ManagementConsulting";
 import StaffingSolutionsDetail from "./pages/staffing/StaffingSolutionsDetail";
 
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminJobs from "./pages/admin/AdminJobs";
+import AdminApplicants from "./pages/admin/AdminApplicants";
+import AdminSettings from "./pages/admin/AdminSettings";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -69,6 +75,14 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/career" element={<Navigate to="/careers" replace />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/jobs" element={<AdminJobs />} />
+          <Route path="/admin/applicants" element={<AdminApplicants />} />
+          <Route path="/admin/settings" element={<AdminSettings />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
